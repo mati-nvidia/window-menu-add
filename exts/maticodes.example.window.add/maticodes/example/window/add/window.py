@@ -27,5 +27,4 @@ class MyCustomWindow(ui.Window):
                 ui.Label("This is just an empty window", width=0, alignment=ui.Alignment.CENTER)
 
     def _on_visibility_changed(self, visible):
-        if not visible:
-            omni.kit.ui.get_editor_menu().set_value(self._menu_path, False)
+        omni.kit.ui.get_editor_menu().set_value(self._menu_path, visible)
