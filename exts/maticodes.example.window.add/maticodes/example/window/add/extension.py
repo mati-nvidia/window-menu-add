@@ -26,7 +26,7 @@ class WindowMenuAddExtension(omni.ext.IExt):
 
         for menu in self._menus:
             omni.kit.ui.get_editor_menu().remove_item(menu)
-        for window in self._windows:
+        for window_title, window in self._windows.items():
             if window is not None:
                 window.destroy()
         self._windows = None
